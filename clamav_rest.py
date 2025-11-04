@@ -8,7 +8,7 @@ import clamd
 
 # --- Configuration du logger ---
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("clamav-api")
+logger = logging.getLogger("clamav-rest")
 
 # --- Initialisation de l'application FastAPI ---
 app = FastAPI(
@@ -102,3 +102,4 @@ async def scan_file(file: UploadFile = File(...)):
             "Description": virus_name
         }
     )
+
